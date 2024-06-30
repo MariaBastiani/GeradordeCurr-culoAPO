@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gerador de Currículo</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="todo">
+        <h1>Gerador de Currículo</h1>
+        <form action="gerado.php" method="post">
+            <div class="dados-pessoais">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            <div class="dados-pessoais">
+                <label for="data-nascimento">Data de Nascimento:</label>
+                <input type="date" id="data-nascimento" name="data_nascimento" required>
+            </div>
+            <div class="dados-pessoais">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="dados-pessoais">
+                <label for="telefone">Telefone/Celular:</label>
+                <input type="tel" id="telefone" name="telefone" required>
+            </div>
+            <div class="dados-pessoais">
+                <label for="endereco">Endereço:</label>
+                <input type="text" id="endereco" name="endereco" required>
+            </div>
+            
+            <h2>Qualificações</h2>
+            <div id="qualificacao">
+                <div class="qualificacao-item">
+                    <div class="dados-pessoais">
+                        <label for="curso1">Curso:</label>
+                        <input type="text" id="curso1" name="qualificacoes[0][curso]">
+                    </div>
+                    <div class="dados-pessoais">
+                        <label for="instituicao1">Instituição:</label>
+                        <input type="text" id="instituicao1" name="qualificacoes[0][instituicao]">
+                    </div>
+                    <div class="dados-pessoais">
+                        <label for="conclusao1">Conclusão:</label>
+                        <input type="date" id="conclusao1" name="qualificacoes[0][conclusao]">
+                    </div>
+                </div>
+            </div>
+            <button type="button" id="add-qualificacao">Adicionar qualificação</button>
+
+            <h2>Experiência Profissional</h2>
+            <div id="experiencia">
+                <div class="experiencia-item">
+                    <div class="dados-pessoais">
+                        <label for="data-entrada1">Data Entrada:</label>
+                        <input type="date" id="data-entrada1" name="experiencias[0][data_entrada]">
+                    </div>
+                    <div class="dados-pessoais">
+                        <label for="data-saida1">Data Saída:</label>
+                        <input type="date" id="data-saida1" name="experiencias[0][data_saida]">
+                    </div>
+                    <div class="dados-pessoais">
+                        <label for="empresa1">Empresa:</label>
+                        <input type="text" id="empresa1" name="experiencias[0][empresa]">
+                    </div>
+                    <div class="dados-pessoais">
+                        <label for="cargo1">Cargo:</label>
+                        <input type="text" id="cargo1" name="experiencias[0][cargo]">
+                    </div>
+                </div>
+            </div>
+            <button type="button" id="add-experiencia">Adicionar Experiência</button>
+
+            <h2 class="sobre-mim">Sobre mim</h2>
+            <div class="dados-pessoais">
+                <label for="mim">Qualidades pessoais:</label>
+                <input type="text" id="mim" name="sobre_mim">
+            </div>
+            <h2 class="referencias">Referências</h2>
+            <div class="dados-pessoais">
+                <label for="contato">Contato de referência:</label>
+                <input type="text" id="contato" name="referencias">
+            </div>
+
+            <button type="submit">Gerar meu currículo</button>
+        </form>
+        <button id="top-button" onclick="topFunction()">Ir para o topo</button>
+    </div>
+    <script src="JavaScript.js"></script>
+</body>
+</html>
